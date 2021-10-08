@@ -11,7 +11,7 @@
 # 机器人webhook地址
 JIANMU_BOT_WEBHOOK_URL
 
-# 消息类型(text/fulltext/chat/image/interactive)
+# 消息类型(text/fulltext)
 JIANMU_MSGTYPE
 ```
 
@@ -41,18 +41,6 @@ JIANMU_MSG_LINK_HREF
 JIANMU_MSG_AT_LIST
 ```
 [如何查看userid](https://open.feishu.cn/document/home/user-identity-introduction/how-to-get)
-
-chat
-```
-# 分享群的open_chat_id
-JIANMU_SHARE_CHAT_ID
-```
-
-image
-```
-# 图片内容的base64编码，必填，图片（base64编码前）最大不能超过2M，支持JPG,PNG格式
-JIANMU_IMAGE_BASE64
-```
 
 #### 构建docker镜像
 ```

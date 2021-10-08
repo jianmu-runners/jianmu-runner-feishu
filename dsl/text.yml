@@ -1,0 +1,20 @@
+ref: feishu_notice
+version: 1.0.0
+inputParameters:
+  - name: 机器人webhook
+    ref: bot_webhook_url
+    type: SECRET
+    value: ((xxx))
+    description: 机器人webhook
+  - name: 消息类型
+    ref: msgtype
+    type: STRING
+    value: text
+    description: 消息类型
+  - name: 消息文本
+    ref: msg_text
+    type: STRING
+    value: xxx
+    description: 消息文本
+spec:
+  image: jianmudev/jianmu-runner-feishu:1.0.0
