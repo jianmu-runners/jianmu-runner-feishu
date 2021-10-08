@@ -4,7 +4,7 @@ inputParameters:
   - name: 机器人webhook
     ref: bot_webhook_url
     type: SECRET
-    value: ((xxx))
+    value: ((xxx.xxx))
     description: 机器人webhook
   - name: 消息类型
     ref: msgtype
