@@ -1,4 +1,4 @@
-ref: fill/feishu
+ref: feishu_notice
 version: 1.0.0
 inputParameters:
   - name: 机器人webhook
@@ -37,4 +37,4 @@ inputParameters:
     value: '[]'
     description: 提醒列表，userid，若填写，将会@指定用户，@all表示提醒所有人
 spec:
-  image: daihw/feishu:1.0.0
+  image:jianmudev/jianmu-runner-feishu:1.0.0
