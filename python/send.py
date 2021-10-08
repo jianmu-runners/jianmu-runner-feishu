@@ -9,10 +9,6 @@ print('进入send')
 JIANMU_BOT_WEBHOOK_URL = os.getenv('JIANMU_BOT_WEBHOOK_URL')
 JIANMU_MSGTYPE = os.getenv('JIANMU_MSGTYPE')
 
-if JIANMU_BOT_WEBHOOK_URL == '((xxx))':
-    print('Error: JIANMU_BOT_WEBHOOK_URL is empty!')
-    sys.exit(1)
-
 if JIANMU_MSGTYPE == 'text':
     text.send()
 elif JIANMU_MSGTYPE == 'fulltext':
