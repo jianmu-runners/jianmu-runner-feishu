@@ -1,4 +1,4 @@
-# jianmu-runner-notice
+# jianmu-runner-feishu
 
 #### 介绍
 用于对接飞书机器人
@@ -45,19 +45,20 @@ JIANMU_MSG_AT_LIST
 #### 构建docker镜像
 ```
 # 创建docker镜像
-docker build -t jianmudev/jianmu-runner-feishu-notice:${version} .
+docker build -t jianmudev/jianmu-runner-feishu:${version} -f dockerfile/Dockerfile .
 
 # 上传docker镜像
-docker push jianmudev/jianmu-runner-feishu-notice:${version}
+docker push jianmudev/jianmu-runner-feishu:${version}
 ```
 
 #### 用法
-企业微信发送通知:
+飞书发送通知:
 ```
 docker run --rm \
   -e JIANMU_BOT_WEBHOOK_URL=xxx \
   -e JIANMU_MSGTYPE=xxx \
-  -e JIANMU_TEXT_CONTENT=xxx \
-  -e JIANMU_MENTIONED_MOBILE_LIST='["xxx"]' \
-  jianmudev/jianmu-runner-feishu-notice:${version}
+  -e JIANMU_MSG_TITLE=xxx \
+  -e JIANMU_MSG_TEXT=xxx \
+  -e JIANMU_MSG_AT_LIST='["xxx"]' \
+  jianmudev/jianmu-runner-feishu:${version}
 ```
