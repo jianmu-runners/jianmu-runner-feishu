@@ -18,6 +18,6 @@ def send(url):
     data1 = json.dumps(data)
     response = requests.post(url=url, data=data1)
     content = response.json()
-    if content.get("code") != 0:
+    if content.get("StatusCode") != 0:
         raise Exception(content)
     print(content)

@@ -20,6 +20,6 @@ def send_image(url):
         data=json.dumps(data)
     )
     content = response.json()
-    if content.get("StatusMessage") != 0:
+    if content.get("StatusCode") != 0:
         raise Exception(content)
     print(content)

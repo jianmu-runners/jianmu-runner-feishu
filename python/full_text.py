@@ -29,8 +29,8 @@ def send(url):
                                 "text": JIANMU_MSG_TEXT
                             }, {
                             "tag": "a",
-                            "text": JIANMU_MSG_LINK_TEXT,
-                            "href": JIANMU_MSG_LINK_HREF
+                            "text": JIANMU_MSG_LINK_TEXT if JIANMU_MSG_LINK_TEXT else "",
+                            "href": JIANMU_MSG_LINK_HREF if JIANMU_MSG_LINK_HREF else ""
                         }
                         ]
                     ]
