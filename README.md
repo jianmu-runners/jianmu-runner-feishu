@@ -148,7 +148,7 @@ docker run --rm \
 ```
 docker run --rm \
     -e JIANMU_BOT_WEBHOOK_URL=xxx \
-    -e JIANMU_MSGTYPE=image \
+    -e JIANMU_MSGTYPE=interactive \
     -e JIANMU_APP_ID=xxx \
     -e JIANMU_APP_SECRET=xxx \
     -e JIANMU_IMAGE_URL=xxx \
