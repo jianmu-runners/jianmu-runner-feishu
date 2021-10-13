@@ -9,7 +9,6 @@ def send(url):
     JIANMU_MSG_TITLE = os.getenv('JIANMU_MSG_TITLE')
     JIANMU_MSG_TEXT = os.getenv('JIANMU_MSG_TEXT')
     JIANMU_MSG_MARKDOWN = os.getenv('JIANMU_MSG_MARKDOWN')
-    JIANMU_MSG_AT_LIST = json.loads(os.getenv("JIANMU_MSG_AT_LIST"))
     JIANMU_MSG_AT_PHONE_LIST = json.loads(os.getenv("JIANMU_MSG_AT_PHONE_LIST"))
 
     data = {
@@ -60,17 +59,16 @@ def send(url):
         )
 
     if (JIANMU_MSG_AT_PHONE_LIST):
-            JIANMU_MSG_AT_LIST.extend(util.getUserId(JIANMU_MSG_AT_PHONE_LIST, 'open_id'))
-    if (JIANMU_MSG_AT_LIST):
+        open_ids = util.getOpenId(JIANMU_MSG_AT_PHONE_LIST)
         div = {
             "tag": "div",
             "fields": []
         }
-        for userId in JIANMU_MSG_AT_LIST:
+        for open_id in open_ids:
             div['fields'].append({
                 "text": {
                     "tag": "lark_md",
-                    "content": "<at id=" + userId + "><at>"
+                    "content": "<at id=" + open_id + "><at>"
                 }
             })
         data['card']['elements'].append(div)

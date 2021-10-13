@@ -41,11 +41,6 @@ inputParameters:
     type: STRING
     value: ''
     description: markdown文本
-  - name: 提醒列表，userid，若填写，将会@指定用户，@all表示提醒所有人
-    ref: msg_at_list
-    type: STRING
-    value: '[]'
-    description: 提醒列表，userid，若填写，将会@指定用户，@all表示提醒所有人
   - name: 提醒列表，phone，若填写，将会@指定用户，@all表示提醒所有人
     ref: msg_at_phone_list
     type: STRING

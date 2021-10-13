@@ -40,7 +40,13 @@ def send(url):
 
     # add at user
     if (JIANMU_MSG_AT_PHONE_LIST):
-        JIANMU_MSG_AT_LIST.extend(util.getUserId(JIANMU_MSG_AT_PHONE_LIST, 'user_id'))
+        open_ids = util.getOpenId(JIANMU_MSG_AT_PHONE_LIST)
+        for open_id in open_ids:
+            at = {
+                "tag": "at"
+            }
+        at["open_id"] = open_id
+        data['content']['post']['zh_cn']['content'][0].append(at)
     for user_id in JIANMU_MSG_AT_LIST:
         at = {
             "tag": "at"

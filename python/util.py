@@ -17,7 +17,7 @@ def getToken():
     return content.get("tenant_access_token")
 
 
-def getUserId(phones, idStr):
+def getOpenId(phones):
     token = getToken()
     if(not token):
         token = ""
@@ -40,7 +40,7 @@ def getUserId(phones, idStr):
     for phone in phones:
         user = mobile_users.get(phone)
         if (user):
-            userIds.append(user[0][idStr])
+            userIds.append(user[0].get('open_id'))
     return userIds
 
 def upload_image():

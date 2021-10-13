@@ -57,6 +57,10 @@ JIANMU_APP_SECRET
 [如何获取AppId和AppSecret](https://open.feishu.cn/document/home/develop-a-bot-in-5-minutes/create-an-app)
 
 [如何开启应用权限](https://open.feishu.cn/document/ukTMukTMukTM/uQjN3QjL0YzN04CN2cDN)
+![permission.png](./images/permission.png)
+
+发布版本时，可用性需要选择所有员工
+![usability.png](./images/usability.png)
 
 image
 ```
