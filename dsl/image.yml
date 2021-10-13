@@ -1,0 +1,30 @@
+ref: feishu_notice
+version: 1.0.0
+inputParameters:
+  - name: 机器人webhook
+    ref: bot_webhook_url
+    type: SECRET
+    value: ((xxx.xxx))
+    description: 机器人webhook
+  - name: 消息类型
+    ref: msgtype
+    type: STRING
+    value: image
+    description: 消息类型
+  - name: App ID
+    ref: app_id
+    type: STRING
+    value: xxx
+    description: App ID
+  - name: App Secret
+    ref: app_secret
+    type: SECRET
+    value: ((xxx.xxx))
+    description: App Secret
+  - name: 图片url
+    ref: image_url
+    type: STRING
+    value: xxxx
+    description: 图片url
+spec:
+  image: jianmudev/jianmu-runner-feishu:1.0.0

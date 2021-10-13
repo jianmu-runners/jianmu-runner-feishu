@@ -4,9 +4,8 @@ import json
 import os
 import requests
 
-def send():
+def send(url):
     print('进入text')
-    JIANMU_BOT_WEBHOOK_URL = os.getenv('JIANMU_BOT_WEBHOOK_URL')
     JIANMU_MSG_TEXT = os.getenv('JIANMU_MSG_TEXT')
 
     data = {
@@ -17,5 +16,8 @@ def send():
     }
 
     data1 = json.dumps(data)
-    response = requests.post(url=JIANMU_BOT_WEBHOOK_URL, data=data1)
-    print(response.text)
+    response = requests.post(url=url, data=data1)
+    content = response.json()
+    if content.get("code") != 0:
+        raise Exception(content)
+    print(content)

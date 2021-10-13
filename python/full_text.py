@@ -4,14 +4,17 @@ import json
 import os
 import requests
 
-def send():
+import util
+
+
+def send(url):
     print('进入fulltext')
-    JIANMU_BOT_WEBHOOK_URL = os.getenv("JIANMU_BOT_WEBHOOK_URL")
     JIANMU_MSG_TITLE = os.getenv("JIANMU_MSG_TITLE")
     JIANMU_MSG_TEXT = os.getenv("JIANMU_MSG_TEXT")
     JIANMU_MSG_LINK_TEXT = os.getenv("JIANMU_MSG_LINK_TEXT")
     JIANMU_MSG_LINK_HREF = os.getenv("JIANMU_MSG_LINK_HREF")
     JIANMU_MSG_AT_LIST = json.loads(os.getenv("JIANMU_MSG_AT_LIST"))
+    JIANMU_MSG_AT_PHONE_LIST = json.loads(os.getenv("JIANMU_MSG_AT_PHONE_LIST"))
 
     data = {
         "msg_type": "post",
@@ -37,13 +40,16 @@ def send():
     }
 
     # add at user
+    if (JIANMU_MSG_AT_PHONE_LIST):
+        JIANMU_MSG_AT_LIST.extend(util.getUserId(JIANMU_MSG_AT_PHONE_LIST, 'user_id'))
     for user_id in JIANMU_MSG_AT_LIST:
         at = {
             "tag": "at"
         }
         at["user_id"] = user_id
         data['content']['post']['zh_cn']['content'][0].append(at)
-
-    data1 = json.dumps(data)
-    response = requests.post(url=JIANMU_BOT_WEBHOOK_URL, data=data1)
-    print(response.text)
+    response = requests.post(url=url, data=json.dumps(data))
+    content = response.json()
+    if content.get("StatusCode") != 0:
+        raise Exception(content)
+    print(content)
