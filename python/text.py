@@ -4,8 +4,8 @@ import json
 import os
 import requests
 
+
 def send(url):
-    print('进入text')
     JIANMU_MSG_TEXT = os.getenv('JIANMU_MSG_TEXT')
 
     data = {

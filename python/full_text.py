@@ -8,7 +8,6 @@ import util
 
 
 def send(url):
-    print('进入fulltext')
     JIANMU_MSG_TITLE = os.getenv("JIANMU_MSG_TITLE")
     JIANMU_MSG_TEXT = os.getenv("JIANMU_MSG_TEXT")
     JIANMU_MSG_LINK_TEXT = os.getenv("JIANMU_MSG_LINK_TEXT")

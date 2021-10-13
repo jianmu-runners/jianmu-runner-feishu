@@ -7,7 +7,6 @@ import util
 
 
 def send_image(url):
-    print('进入image')
     image = util.upload_image()
     data = {
         "msg_type": "image",

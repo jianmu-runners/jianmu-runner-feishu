@@ -1,13 +1,13 @@
 # coding:utf-8
 
-import full_text
 import os
-import text
 import sys
+
+import full_text
 import image
 import interactive
+import text
 
-print('进入send')
 JIANMU_BOT_WEBHOOK_URL = os.getenv('JIANMU_BOT_WEBHOOK_URL')
 JIANMU_MSGTYPE = os.getenv('JIANMU_MSGTYPE')
 
@@ -23,5 +23,5 @@ elif JIANMU_MSGTYPE == 'image':
 elif JIANMU_MSGTYPE == 'interactive':
     interactive.send(JIANMU_BOT_WEBHOOK_URL)
 else:
-    print('Error: The value of JIANMU_MSGTYPE must be in (text|fulltext|chat|image|interactive)!')
+    print('Error: The value of JIANMU_MSGTYPE must be in (text|fulltext|image|interactive)!')
     sys.exit(1)

@@ -13,7 +13,7 @@ def getToken():
     response = requests.post(url=postUrl, data=json.dumps(payload_message))
     content = response.json()
     if content.get("code") != 0:
-        print("get token filed, errorCode is %s，please check AppID or App Secret" % content['code'])
+        print("get token failed, errorCode is %s，please check AppID or App Secret" % content['code'])
     return content.get("tenant_access_token")
 
 
@@ -30,7 +30,7 @@ def getUserId(phones, idStr):
     userIds = []
 
     if content.get('code') != 0:
-        print("get userId filed, errorCode is %s" % content['code'])
+        print("get userId failed, errorCode is %s" % content['code'])
         return userIds
     if(content['data']['mobiles_not_exist']):
         print("mobiles_not_exist:", content['data']['mobiles_not_exist'])
