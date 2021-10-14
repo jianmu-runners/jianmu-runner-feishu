@@ -1,4 +1,4 @@
-ref: feishu_notice
+ref: feishu_notice_image
 version: 1.0.0
 inputParameters:
   - name: 机器人webhook
@@ -6,11 +6,6 @@ inputParameters:
     type: SECRET
     value: ((xxx.xxx))
     description: 机器人webhook
-  - name: 消息类型
-    ref: msgtype
-    type: STRING
-    value: image
-    description: 消息类型
   - name: App ID
     ref: app_id
     type: STRING
@@ -28,3 +23,4 @@ inputParameters:
     description: 图片url
 spec:
   image: jianmudev/jianmu-runner-feishu:1.0.0
+  cmd: [ "/usr/local/bin/image.py" ]

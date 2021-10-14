@@ -1,16 +1,17 @@
+import json
 import os
 import requests
-import json
+
 
 def getToken():
-    JIANMU_APP_ID = os.getenv('JIANMU_APP_ID')
-    JIANMU_APP_SECRET = os.getenv('JIANMU_APP_SECRET')
-    postUrl = "https://open.feishu.cn/open-apis/auth/v3/tenant_access_token/internal/"
+    app_id = os.getenv('JIANMU_APP_ID')
+    app_secret = os.getenv('JIANMU_APP_SECRET')
+    post_url = "https://open.feishu.cn/open-apis/auth/v3/tenant_access_token/internal/"
     payload_message = {
-        "app_id": JIANMU_APP_ID,
-        "app_secret": JIANMU_APP_SECRET
+        "app_id": app_id,
+        "app_secret": app_secret
     }
-    response = requests.post(url=postUrl, data=json.dumps(payload_message))
+    response = requests.post(url=post_url, data=json.dumps(payload_message))
     content = response.json()
     if content.get("code") != 0:
         print("get token failed, errorCode is %s，please check AppID or App Secret" % content['code'])
@@ -19,7 +20,7 @@ def getToken():
 
 def getOpenId(phones):
     token = getToken()
-    if(not token):
+    if (not token):
         token = ""
     mobiles = "&mobiles=".join(phones)
     response = requests.get(
@@ -32,7 +33,7 @@ def getOpenId(phones):
     if content.get('code') != 0:
         print("get userId failed, errorCode is %s" % content['code'])
         return userIds
-    if(content['data']['mobiles_not_exist']):
+    if (content['data']['mobiles_not_exist']):
         print("mobiles_not_exist:", content['data']['mobiles_not_exist'])
 
     mobile_users = content.get('data').get('mobile_users')
@@ -43,11 +44,12 @@ def getOpenId(phones):
             userIds.append(user[0].get('open_id'))
     return userIds
 
+
 def upload_image():
-    JIANMU_IMAGE_URL = os.getenv('JIANMU_IMAGE_URL')
-    if(not JIANMU_IMAGE_URL):
+    image_url = os.getenv('JIANMU_IMAGE_URL')
+    if (not image_url):
         return ""
-    response = requests.get(JIANMU_IMAGE_URL)
+    response = requests.get(image_url)
     token = getToken()
     response = requests.post(
         url='https://open.feishu.cn/open-apis/image/v4/put/',

@@ -1,4 +1,4 @@
-ref: feishu_notice
+ref: feishu_notice_post
 version: 1.0.0
 inputParameters:
   - name: 机器人webhook
@@ -6,11 +6,6 @@ inputParameters:
     type: SECRET
     value: ((xxx.xxx))
     description: 机器人webhook
-  - name: 消息类型
-    ref: msgtype
-    type: STRING
-    value: fulltext
-    description: 消息类型
   - name: 消息标题
     ref: msg_title
     type: STRING
@@ -53,3 +48,4 @@ inputParameters:
     description: 提醒列表，phone，若填写，将会@指定用户，@all表示提醒所有人
 spec:
   image: jianmudev/jianmu-runner-feishu:1.0.0
+  cmd: [ "/usr/local/bin/post.py" ]
