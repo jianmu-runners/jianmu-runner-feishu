@@ -18,7 +18,7 @@ def getToken():
     return content.get("tenant_access_token")
 
 
-def getOpenId(phones):
+def getOpenId(phones, str):
     token = getToken()
     if (not token):
         token = ""
@@ -41,7 +41,7 @@ def getOpenId(phones):
     for phone in phones:
         user = mobile_users.get(phone)
         if (user):
-            userIds.append(user[0].get('open_id'))
+            userIds.append(user[0].get(str))
     return userIds
 
 

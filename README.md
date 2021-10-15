@@ -49,11 +49,11 @@ JIANMU_MSG_LINK_HREF
 # userid的列表，提醒群中的指定成员(@某个成员)，@all表示提醒所有人，非必填
 JIANMU_MSG_AT_LIST
 
-# 手机号列表，提醒群中的指定成员(@某个成员)，@all表示提醒所有人，非必填。需要App ID和App Secret，并且还要开启通过手机号或邮箱获取用户ID的权限
+# 手机号列表，提醒群中的指定成员(@某个成员)，@all表示提醒所有人，非必填。需要App ID和App Secret，并且还要开启"通过手机号或邮箱获取用户ID"和"获取用户userID"的权限
 JIANMU_MSG_AT_PHONE_LIST
 ```
 ```
-# 通过手机号@成员，需要App ID和App Secret，并且还要开启通过手机号或邮箱获取用户ID的权限
+# 通过手机号@成员，需要App ID和App Secret，并且还要开启"通过手机号或邮箱获取用户ID"和"获取用户userID"的权限
 
 # 飞书应用App ID
 JIANMU_APP_ID
@@ -89,13 +89,13 @@ JIANMU_MSG_TEXT
 # markdown文本，非必填
 JIANMU_MSG_MARKDOWN
 
-# 手机号列表，提醒群中的指定成员(@某个成员)，@all表示提醒所有人，非必填。需要App ID和App Secret，并且还要开启通过手机号或邮箱获取用户ID的权限
+# 手机号列表，提醒群中的指定成员(@某个成员)，@all表示提醒所有人，非必填。需要App ID和App Secret，并且还要开启"通过手机号或邮箱获取用户ID"和"获取用户userID"的权限
 JIANMU_MSG_AT_PHONE_LIST
 ```
 [markdown支持语法](https://open.feishu.cn/document/ukTMukTMukTM/uADOwUjLwgDM14CM4ATN)
 ```
 # 发送图片，需要App ID和App Secret
-# 通过手机号@成员，需要App ID和App Secret，并且还要开启通过手机号或邮箱获取用户ID的权限
+# 通过手机号@成员，需要App ID和App Secret，并且还要开启"通过手机号或邮箱获取用户ID"和"获取用户userID"的权限
 
 # 飞书应用App ID
 JIANMU_APP_ID

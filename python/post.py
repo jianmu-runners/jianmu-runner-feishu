@@ -39,13 +39,7 @@ data = {
 
 # add at user
 if (msg_at_phone_list):
-    open_ids = util.getOpenId(msg_at_phone_list)
-    for open_id in open_ids:
-        at = {
-            "tag": "at"
-        }
-    at["open_id"] = open_id
-    data['content']['post']['zh_cn']['content'][0].append(at)
+    msg_at_list.extend(util.getOpenId(msg_at_phone_list, 'user_id'))
 for user_id in msg_at_list:
     at = {
         "tag": "at"

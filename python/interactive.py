@@ -59,7 +59,7 @@ if (msg_markdown):
     )
 
 if (msg_at_phone_list):
-    open_ids = util.getOpenId(msg_at_phone_list)
+    open_ids = util.getOpenId(msg_at_phone_list, 'open_id')
     div = {
         "tag": "div",
         "fields": []
