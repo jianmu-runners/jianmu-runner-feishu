@@ -24,7 +24,7 @@ inputParameters:
   - name: 图片url
     ref: image_url
     type: STRING
-    value: xxxx
+    value: ''
     description: 图片url
   - name: 消息文本
     ref: msg_text
