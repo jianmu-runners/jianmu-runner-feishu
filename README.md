@@ -119,7 +119,8 @@ docker push jianmudev/jianmu-runner-feishu:${version}
 docker run --rm \
   -e JIANMU_BOT_WEBHOOK_URL=xxx \
   -e JIANMU_MSG_TEXT=xxx \
-  jianmudev/jianmu-runner-feishu:${version}
+  jianmudev/jianmu-runner-feishu:${version} \
+  /usr/local/bin/text.py
 ```
 
 飞书发送富文本通知:
@@ -134,7 +135,8 @@ docker run --rm \
   -e JIANMU_APP_ID=xxx \
   -e JIANMU_APP_SECRET=xxx \
   -e JIANMU_MSG_AT_PHONE_LIST='["xxx"]' \
-  jianmudev/jianmu-runner-feishu:${version}
+  jianmudev/jianmu-runner-feishu:${version} \
+  /usr/local/bin/post.py
 ```
 
 飞书发送图片:
@@ -144,7 +146,8 @@ docker run --rm \
     -e JIANMU_APP_ID=xxx \
     -e JIANMU_APP_SECRET=xxx \
     -e JIANMU_IMAGE_URL=xxx \
-    jianmudev/jianmu-runner-feishu:${version}
+    jianmudev/jianmu-runner-feishu:${version} \
+    /usr/local/bin/image.py
 ```
 
 飞书发送消息卡片:
@@ -158,7 +161,8 @@ docker run --rm \
     -e JIANMU_MSG_TEXT=xxx \
     -e JIANMU_MSG_MARKDOWN=xxx \
     -e JIANMU_MSG_AT_LIST='["xxx"]' \
-    jianmudev/jianmu-runner-feishu:${version}
+    jianmudev/jianmu-runner-feishu:${version} \
+    /usr/local/bin/interactive.py
 ```
 
 
