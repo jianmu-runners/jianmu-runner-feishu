@@ -24,7 +24,7 @@ JIANMU_BOT_WEBHOOK_URL
 
 ```
 
-### 不同通知类型设置不同的参数
+### 根据通知类型设置不同的参数
 
 #### text
 ```
@@ -32,7 +32,7 @@ JIANMU_BOT_WEBHOOK_URL
 JIANMU_MSG_TEXT
 ```
 
-#### fulltext
+#### post
 ```
 # 文本标题，非必填
 JIANMU_MSG_TITLE
