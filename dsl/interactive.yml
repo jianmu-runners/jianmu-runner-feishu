@@ -5,48 +5,40 @@ inputParameters:
     ref: bot_webhook_url
     type: SECRET
     required: true
-    value:
     description: 机器人webhook
   - name: 消息标题
     ref: msg_title
     type: STRING
-    required: false
     value: ''
     description: 消息标题
   - name: App ID
     ref: app_id
     type: STRING
-    required: false
     value: ((xxx.xxx))
     description: App ID
   - name: App Secret
     ref: app_secret
     type: SECRET
-    required: false
     value: ((xxx.xxx))
     description: App Secret
   - name: 图片url
     ref: image_url
     type: STRING
-    required: false
     value: xxx
     description: 图片url
   - name: 消息文本
     ref: msg_text
     type: STRING
     required: true
-    value:
     description: 消息文本
   - name: markdown文本
     ref: msg_markdown
     type: STRING
-    required: false
     value: xxx
     description: markdown文本
   - name: 提醒列表，phone，若填写，将会@指定用户，@all表示提醒所有人
     ref: msg_at_phone_list
     type: STRING
-    required: false
     value: '[]'
     description: 提醒列表，phone，若填写，将会@指定用户，@all表示提醒所有人
 spec:

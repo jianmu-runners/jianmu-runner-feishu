@@ -5,25 +5,21 @@ inputParameters:
     ref: bot_webhook_url
     type: SECRET
     required: true
-    value:
     description: 机器人webhook
   - name: App ID
     ref: app_id
     type: STRING
     required: true
-    value:
     description: App ID
   - name: App Secret
     ref: app_secret
     type: SECRET
     required: true
-    value:
     description: App Secret
   - name: 图片url
     ref: image_url
     type: STRING
     required: true
-    value:
     description: 图片url
 spec:
   image: jianmudev/jianmu-runner-feishu:1.0.0
