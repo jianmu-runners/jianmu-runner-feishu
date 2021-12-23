@@ -22,5 +22,5 @@ inputParameters:
     required: true
     description: 图片url
 spec:
-  image: jianmudev/jianmu-runner-feishu:1.0.0
+  image: jianmurunner/feishu_notice_image:1.0.0
   cmd: [ "/usr/local/bin/image.py" ]

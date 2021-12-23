@@ -12,5 +12,5 @@ inputParameters:
     required: true
     description: 消息文本
 spec:
-  image: jianmudev/jianmu-runner-feishu:1.0.0
+  image: jianmurunner/feishu_notice_text:1.0.0
   cmd: ["/usr/local/bin/text.py"]

@@ -42,5 +42,5 @@ inputParameters:
     value: '[]'
     description: 提醒列表，phone，若填写，将会@指定用户，@all表示提醒所有人
 spec:
-  image: jianmudev/jianmu-runner-feishu:1.0.0
+  image: jianmurunner/feishu_notice_interactive:1.0.0
   cmd: [ "/usr/local/bin/interactive.py" ]
