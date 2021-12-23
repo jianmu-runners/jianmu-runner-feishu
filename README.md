@@ -17,10 +17,13 @@
 [如何查看userid](https://open.feishu.cn/document/home/user-identity-introduction/how-to-get)
 
 ## 发布到建木Hub
-* 通过建木CI执行[feishu_notice_text.yml](https://gitee.com/jianmu-runners/jianmu-runner-list/blob/master/release_dsl/feishu_notice_text.yml) ，可将飞书通知-文本节点发布到建木Hub
-* 通过建木CI执行[feishu_notice_post.yml](https://gitee.com/jianmu-runners/jianmu-runner-list/blob/master/release_dsl/feishu_notice_post.yml) ，可将飞书通知-富文本节点发布到建木Hub
-* 通过建木CI执行[feishu_notice_image.yml](https://gitee.com/jianmu-runners/jianmu-runner-list/blob/master/release_dsl/feishu_notice_image.yml) ，可将飞书通知-图片节点发布到建木Hub
-* 通过建木CI执行[feishu_notice_interactive.yml](https://gitee.com/jianmu-runners/jianmu-runner-list/blob/master/release_dsl/feishu_notice_interactive.yml) ，可将飞书通知-消息卡片节点发布到建木Hub
+通过建木CI执行[feishu_notice_text.yml](https://gitee.com/jianmu-runners/jianmu-runner-list/blob/master/release_dsl/feishu_notice_text.yml) ，可将飞书通知-文本节点发布到建木Hub
+
+通过建木CI执行[feishu_notice_post.yml](https://gitee.com/jianmu-runners/jianmu-runner-list/blob/master/release_dsl/feishu_notice_post.yml) ，可将飞书通知-富文本节点发布到建木Hub
+
+通过建木CI执行[feishu_notice_image.yml](https://gitee.com/jianmu-runners/jianmu-runner-list/blob/master/release_dsl/feishu_notice_image.yml) ，可将飞书通知-图片节点发布到建木Hub
+
+通过建木CI执行[feishu_notice_interactive.yml](https://gitee.com/jianmu-runners/jianmu-runner-list/blob/master/release_dsl/feishu_notice_interactive.yml) ，可将飞书通知-消息卡片节点发布到建木Hub
 
 
 ## 参数说明
