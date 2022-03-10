@@ -1,6 +1,6 @@
 ref: feishu_notice_interactive
 version: 1.0.3
-description: 该版本将参数app_id类型修改为SECRET
+description: 该版本修复了获取手机号失败时，节点报错的问题
 inputParameters:
   - name: 机器人webhook
     ref: bot_webhook_url
