@@ -38,6 +38,8 @@ def getOpenId(phones, str):
 
     mobile_users = content.get('data').get('mobile_users')
 
+    if not mobile_users:
+        return userIds
     for phone in phones:
         user = mobile_users.get(phone)
         if (user):

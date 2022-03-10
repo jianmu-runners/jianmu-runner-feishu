@@ -40,12 +40,13 @@ data = {
 # add at user
 if (msg_at_phone_list):
     msg_at_list.extend(util.getOpenId(msg_at_phone_list, 'user_id'))
-for user_id in msg_at_list:
-    at = {
-        "tag": "at"
-    }
-    at["user_id"] = user_id
-    data['content']['post']['zh_cn']['content'][0].append(at)
+if len(msg_at_list) != 0:
+    for user_id in msg_at_list:
+        at = {
+            "tag": "at"
+        }
+        at["user_id"] = user_id
+        data['content']['post']['zh_cn']['content'][0].append(at)
 response = requests.post(url=url, data=json.dumps(data))
 content = response.json()
 if content.get("StatusCode") != 0:

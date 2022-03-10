@@ -1,5 +1,5 @@
 ref: feishu_notice_interactive
-version: 1.0.2
+version: 1.0.3
 description: 该版本将参数app_id类型修改为SECRET
 inputParameters:
   - name: 机器人webhook
@@ -43,5 +43,5 @@ inputParameters:
     value: '[]'
     description: 提醒列表，phone，若填写，将会@指定用户，@all表示提醒所有人
 spec:
-  image: jianmurunner/feishu_notice_interactive:1.0.2
+  image: jianmurunner/feishu_notice_interactive:1.0.3
   cmd: [ "/usr/local/bin/interactive.py" ]

@@ -60,18 +60,19 @@ if (msg_markdown):
 
 if (msg_at_phone_list):
     open_ids = util.getOpenId(msg_at_phone_list, 'open_id')
-    div = {
-        "tag": "div",
-        "fields": []
-    }
-    for open_id in open_ids:
-        div['fields'].append({
-            "text": {
-                "tag": "lark_md",
-                "content": "<at id=" + open_id + "><at>"
-            }
-        })
-    data['card']['elements'].append(div)
+    if len(open_ids) != 0:
+        div = {
+            "tag": "div",
+            "fields": []
+        }
+        for open_id in open_ids:
+            div['fields'].append({
+                "text": {
+                    "tag": "lark_md",
+                    "content": "<at id=" + open_id + "><at>"
+                }
+            })
+        data['card']['elements'].append(div)
 
 response = requests.post(
     url=url,
