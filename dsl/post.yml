@@ -1,6 +1,6 @@
 ref: feishu_notice_post
 version: 1.0.3
-description: 该版本修复了获取手机号失败时，节点报错的问题
+description: 该版本修复了获取手机号失败时，节点报错执行失败的问题
 inputParameters:
   - name: 机器人webhook
     ref: bot_webhook_url
